@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>SecBot</title>
+        <meta charset="utf-8"/>
+            {% load staticfiles %}
+                <link rel="stylesheet" href="{% static 'hub/css/bootstrap.min.css' %}" type = "text/css"/>
+                <link rel="stylesheet" href="{% static 'hub/css/dashboard.css' %}" type = "text/css"/>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+
+<div class="container">
+<body class="body">
+
+    <div class="jumbotron text-center" style="background-color: #7c8696;">
+        <h1>Security Bot - Lxbsstt ©</h1>
+        <p>resize this to prove responsive page exists</p>
+
+        <nav class="navbar navbar-light" style="background-color: #7c8696;">
+                <a class="navbar-brand" href="/">
+                    <img src="/hub/static/hub/img/1.jpg">
+                     SecBot
+                </a>
+             <ul class="nav nav-pills mr-auto nav-tabs">
+
+                  <li class="nav-item">
+                     <a class="nav-link"  href="{% url 'overview' %}">Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'networksettings' %}">Network Settings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link"  href="{% url 'idssettings' %}">NIDS Settings</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'scan' %}">Scan Results</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'idsresults' %}">NIDS Results</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url 'dns' %}">DNS Config</a>
+                  </li>
+             </ul>
+
+        </nav>
+    </div>
+
+
+    <br>
+    <br>
+        <div class="container">
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
+<
+</body>
+</div>
+</html>
